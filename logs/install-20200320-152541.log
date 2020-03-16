@@ -1,0 +1,40 @@
+Capturing output to logs/install-20200320-152541.log
+Installation started at 2020-03-20 15:25:41
+Installing release 'open-release/hawthorn.2'
+
+PLAY [edxapp 水平扩展] **************************************************************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************************************
+ok: [192.168.56.16]
+
+TASK [server_utils : Check for expired edx key] *********************************************************************************************************************************************************************************************************************
+changed: [192.168.56.16]
+
+TASK [server_utils : remove expired edx key] ************************************************************************************************************************************************************************************************************************
+skipping: [192.168.56.16]
+
+TASK [server_utils : Install ubuntu system packages] ****************************************************************************************************************************************************************************************************************
+failed: [192.168.56.16] (item=[u'ack-grep', u'mosh', u'tree', u'screen', u'tmux', u'curl', u'vim', u'dnsutils', u'inetutils-telnet', u'netcat']) => {"failed": true, "item": ["ack-grep", "mosh", "tree", "screen", "tmux", "curl", "vim", "dnsutils", "inetutils-telnet", "netcat"], "msg": "Failed to update apt cache."}
+	to retry, use: --limit @/mnt/d/PycharmProject/MOSOEDU/configuration/playbooks/moso_edxapp.retry
+
+PLAY RECAP **********************************************************************************************************************************************************************************************************************************************************
+192.168.56.16              : ok=2    changed=1    unreachable=0    failed=1   
+
+INFO:/mnt/d/PycharmProject/MOSOEDU/configuration/playbooks/callback_plugins/task_timing: Install ubuntu system packages ------------------------------------------------- 73.85s
+INFO:/mnt/d/PycharmProject/MOSOEDU/configuration/playbooks/callback_plugins/task_timing: Check for expired edx key ------------------------------------------------------- 5.07s
+INFO:/mnt/d/PycharmProject/MOSOEDU/configuration/playbooks/callback_plugins/task_timing: Gathering Facts ----------------------------------------------------------------- 3.70s
+INFO:/mnt/d/PycharmProject/MOSOEDU/configuration/playbooks/callback_plugins/task_timing: remove expired edx key ---------------------------------------------------------- 0.10s
+INFO:/mnt/d/PycharmProject/MOSOEDU/configuration/playbooks/callback_plugins/task_timing:
+Playbook edxapp 水平扩展 finished: 2020-03-20 07:27:11.927801, 4 total tasks.  0:01:23.489430 elapsed. 
+
+ 
+========================================
+Ansible failed!
+----------------------------------------
+If you need help, see https://open.edx.org/getting-help .
+When asking for help, please provide as much information as you can.
+These might be helpful:
+    Your log file is at logs/install-20200320-152541.log
+    Your environment:
+========================================
+Installation finished at 2020-03-20 15:27:12

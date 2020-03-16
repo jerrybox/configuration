@@ -33,3 +33,6 @@ playbooks/travis-test.yml
 
 ### VisualStudioCode ###
 .vscode/*
+
+### moso
+my-passwords.yml
