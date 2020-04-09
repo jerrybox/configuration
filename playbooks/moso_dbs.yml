@@ -1,0 +1,7 @@
+- name: Mysql and Mongodb
+  hosts: all
+  become: True
+  gather_facts: True
+  roles:
+    - role: edxlocal
+    - role: mongo_3_2
